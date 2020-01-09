@@ -80,9 +80,9 @@ class AddEditForm extends React.Component {
             required
           />
         </FormGroup>
-        <Button color="primary" onClick={
-          this.state.book_id === 0 ? this.handleCreate : this.handleUpdate
-        }>Submit</Button>
+        <Button color="primary"
+         onClick={this.state.book_id === 0 ? this.handleCreate : this.handleUpdate}
+         disabled={!this.state.title || !this.state.author_name}>Submit</Button>
       </Form>
     );
   }
